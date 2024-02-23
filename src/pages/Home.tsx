@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../HomeComponents/Header';
+import Header from '../GeraisComponents/Header';
 import GlobalConfigs from '../styles';
-import Footer from '../HomeComponents/Footer';
+import Footer from '../GeraisComponents/Footer';
 import Restaurantes from '../HomeComponents/Restaurantes';
 
 const Home = () => {

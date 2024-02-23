@@ -1,5 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
+import RestauranteAba from "./pages/Restaurante";
+
 
 
 function App() {
@@ -8,7 +10,12 @@ function App() {
     {
       path: '/',
       element: <Home />
+    },
+    {
+      path: '/restaurante/:id',
+      element: <RestauranteAba /> 
     }
+    
   ])
 
   return (
