@@ -50,5 +50,7 @@ export const CardAlimento = styled.div`
         font-size: 14px;
         border: none;
         margin-top: 8px;
+        white-space: nowrap;
     }
+
 `
