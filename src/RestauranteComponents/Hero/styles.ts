@@ -19,7 +19,7 @@ export const NatContainer = styled.div`
     font-weight: 100;
     position: absolute;
     top: 25px;
-    left: 250px;
+    left: 0;
     color: ${Colors.white};
 `
 
@@ -28,7 +28,7 @@ export const NomeContainer = styled.div`
     font-weight: 900;
     position: absolute;
     top: 214px;
-    left: 250px;
+    left: 0;
     color: ${Colors.white}; 
 `
 
@@ -42,3 +42,9 @@ export const Overlay = styled.div`
     z-index: 0;
 `
 
+export const Box = styled.div`
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+`

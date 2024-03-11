@@ -4,12 +4,18 @@ import { Colors } from "../../styles";
 
 export const HeaderContainer = styled.header`
     background-image: url(${backgroundImage});
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 180px;
-    text-align: center;
-    justify-content: space-around;
+
+    div {
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 180px;
+        text-align: center;
+        justify-content: space-between;
+    }
     
 `
 export const Text = styled.p`
@@ -17,4 +23,9 @@ export const Text = styled.p`
     font-weight: 900;
     font-size: 18px;
     line-height: 21px;
+`
+
+export const Container = styled.div`
+    max-width: 1024px;
+    width: 100%;
 `

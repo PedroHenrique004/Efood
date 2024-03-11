@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { OpcoesDoDia } from '../../HomeComponents/Card/opcoes'
-import { Container, ImagemFundo, NatContainer, NomeContainer, Overlay } from "./styles"; // importe Overlay
+import { Box, Container, ImagemFundo, NatContainer, NomeContainer, Overlay } from "./styles"; // importe Overlay
 
 const Hero = () => {
   const { id } = useParams();
@@ -10,16 +10,17 @@ const Hero = () => {
     <Container>
       {restaurante && <ImagemFundo src={restaurante.imagem[0]} alt={restaurante.nome} />}
       <Overlay />
+      <Box>
       {restaurante && (
-        <>
-          <NatContainer>
-            <p>{restaurante.nacionalidade}</p>
-          </NatContainer>
-          <NomeContainer>
-            <p>{restaurante.nome}</p>
-          </NomeContainer>
-        </>
+            <>
+              <NatContainer>
+                <p>{restaurante.nacionalidade}</p>
+              </NatContainer><NomeContainer>
+                <p>{restaurante.nome}</p>
+              </NomeContainer>
+            </>   
       )}
+      </Box>
     </Container>
   );
 }
