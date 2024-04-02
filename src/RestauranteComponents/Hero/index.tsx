@@ -15,7 +15,8 @@ const Hero = () => {
             <>
               <NatContainer>
                 <p>{restaurante.nacionalidade}</p>
-              </NatContainer><NomeContainer>
+              </NatContainer>
+              <NomeContainer>
                 <p>{restaurante.nome}</p>
               </NomeContainer>
             </>   

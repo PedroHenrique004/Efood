@@ -1,21 +1,29 @@
-import { OpcoesDoDia } from '../Card/opcoes';
+import { useEffect, useState } from 'react';
 import Card from "../Card";
 import { CardContainer, Container } from "./styles";
 
 const Restaurantes = () => {
+    const [restaurantes, setRestaurantes] = useState([]);
+
+    useEffect(() => {
+        fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+        .then(response => response.json())
+        .then(data => setRestaurantes(data));
+    }, []);
+
     return (
         <Container>
             <CardContainer>
-                {OpcoesDoDia.map((opcao) => (
+                {restaurantes.map((restaurante) => (
                     <Card 
-                        id={opcao.id}
-                        key={opcao.id}
-                        imagem={opcao.imagem}
-                        nome={opcao.nome}
-                        NotaAvaliacao={opcao.NotaAvaliacao}
-                        descricao={opcao.descricao}
-                        nacionalidade={opcao.nacionalidade}
-                        destaque={opcao.destaque}
+                        id={restaurante.id}
+                        key={restaurante.id}
+                        imagem={restaurante.imagem}
+                        nome={restaurante.titulo}
+                        NotaAvaliacao={restaurante.avaliacao}
+                        descricao={restaurante.descricao}
+                        nacionalidade={restaurante.tipo}
+                        destaque={restaurante.destacado}
                     />
                 ))}
             </CardContainer>
